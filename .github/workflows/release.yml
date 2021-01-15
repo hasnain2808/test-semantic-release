@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 12
       - name: Set-up semantic-release plugins
-        run: npm install @semantic-release/git @semantic-release/exec -D
+        run: npm install -g  @semantic-release/git @semantic-release/exec -D
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
