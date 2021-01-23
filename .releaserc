@@ -3,11 +3,14 @@
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
-        ["@semantic-release/exec", {         }],
+        ["@semantic-release/exec", {
+		"shell": "python setup.py bdist_wheel",
+	}],
         "@semantic-release/github",
 	["@semantic-release/github", {
       		"assets": [
-        		{"path": "README.md", "label": "readme"},
+        		{"path": "dist/frappe_bench-5.2.1-py3-none-any.whl", "label": "frappe_bench-5.2.1-py2.py3-none-any.whl
+"},
       		]
     	}],
     ]
